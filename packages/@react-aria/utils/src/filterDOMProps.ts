@@ -20,7 +20,8 @@ const labelablePropNames = new Set([
   'aria-label',
   'aria-labelledby',
   'aria-describedby',
-  'aria-details'
+  'aria-details',
+  'aria-busy'
 ]);
 
 // See LinkDOMProps in dom.d.ts.

@@ -302,7 +302,7 @@ describe('Table', () => {
 
   it('should support DOM props', () => {
     let {getByRole, getAllByRole} = renderTable({
-      tableProps: {'data-testid': 'table'},
+      tableProps: {'data-testid': 'table', 'aria-busy': true},
       tableHeaderProps: {'data-testid': 'table-header'},
       columnProps: {'data-testid': 'column'},
       tableBodyProps: {'data-testid': 'table-body'},
@@ -311,6 +311,7 @@ describe('Table', () => {
     });
     let table = getByRole('grid');
     expect(table).toHaveAttribute('data-testid', 'table');
+    expect(table).toHaveAttribute('aria-busy', true);
 
     for (let row of getAllByRole('row').slice(1)) {
       expect(row).toHaveAttribute('data-testid', 'row');
