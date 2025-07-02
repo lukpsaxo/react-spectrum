@@ -311,7 +311,7 @@ describe('Table', () => {
     });
     let table = getByRole('grid');
     expect(table).toHaveAttribute('data-testid', 'table');
-    expect(table).toHaveAttribute('aria-busy', true);
+    expect(table).toHaveAttribute('aria-busy', 'true');
 
     for (let row of getAllByRole('row').slice(1)) {
       expect(row).toHaveAttribute('data-testid', 'row');
